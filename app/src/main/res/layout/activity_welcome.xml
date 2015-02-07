@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/primary"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".WelcomeActivity">
+
+    <TextView
+        android:id="@+id/text_app_title"
+        android:text="@string/app_name"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:text="@string/slogan"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="18sp"
+        android:layout_below="@id/text_app_title"
+        android:layout_width="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/input_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:inputType="textCapWords"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/textColorPrimary"
+        android:fontFamily="sans-serif-light"
+        android:textColorHint="@color/textColorSecondary"
+        style="@style/EditTextCustom"
+        android:hint="@string/input_location_hint"/>
+
+    <Button
+        android:id="@+id/button_get_started"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_location"
+        android:textAllCaps="true"
+        android:gravity="right|center"
+        android:text="@string/get_started"
+        android:textColor="@color/textColorPrimary"
+        style="?android:attr/borderlessButtonStyle"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:onClick="loadWeather"/>
+
+</RelativeLayout>

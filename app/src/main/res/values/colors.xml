@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="primary" type="color">#3F51B5</item>
+    <item name="secondary" type="color">#303F9F</item>
+    <item name="textColorPrimary" type="color">#FFFFFF</item>
+    <item name="textColorSecondary" type="color">#D9FFFFFF</item>
+    <item name="temperatureHigh" type="color">#F50057</item>
+    <item name="temperatureLow" type="color">#3F51B5</item>
+    <item name="accent" type="color">#FF80AB</item>
+</resources>
