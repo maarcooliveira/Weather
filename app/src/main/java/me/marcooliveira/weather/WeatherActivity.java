@@ -25,6 +25,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
 
@@ -163,6 +164,7 @@ public class WeatherActivity extends ActionBarActivity {
             String mode = "json";
             String units = params[1];
             String cnt = "7";
+            String apiId = "86c6107f8767a0d591baf415052514ac";
             ArrayList<DayForecast> response;
 
             /* Code below based on "Developing Android Apps" online course, available at Udacity */
@@ -172,10 +174,11 @@ public class WeatherActivity extends ActionBarActivity {
 
             try {
                 URL url = new URL(baseUrl
-                                + "?q=" + location
+                                + "?q=" + URLEncoder.encode(location, "utf-8")
                                 + "&mode=" + mode
                                 + "&units=" + units
-                                + "&cnt=" + cnt);
+                                + "&cnt=" + cnt
+                                + "&APPID=" + apiId);
 
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
